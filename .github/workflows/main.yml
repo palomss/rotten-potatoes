@@ -38,7 +38,7 @@ jobs:
             push: true
             tags: |
               palomss/rotten-potatoes:latest
-              palomss/rotten-potatoes:${{ github.run_number }
+              palomss/rotten-potatoes:${{ github.run_number }}
               
               
   CD:   
@@ -49,5 +49,5 @@ jobs:
         uses: Azure/k8s-set-context@v1.1
         with:
           method: kubeconfig
-          kubeconfig: ${{secrets.K8S_CONFIG}}
+          kubeconfig: ${{ secrets.K8S_CONFIG }}
       
